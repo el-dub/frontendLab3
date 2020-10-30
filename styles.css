@@ -20,6 +20,11 @@ p {
 	margin-bottom: 10px;
 	line-height: 1.5em;
 }
+h1 {
+	font-size: 3.5vw;
+	font-weight: bold;
+
+}
 h2 {
 	font-size: 30px;
 	text-align: center;
@@ -68,7 +73,7 @@ h2 {
 .header-menu-link{
 	color: white;
 	font-size: 24px;
-	transition: color 0.5s;
+	transition: color ease 0.5s;
 }
 .header-menu-link:hover {
 	color: #14d8cc;
@@ -90,17 +95,14 @@ h2 {
 	width: auto;
 	flex-basis: 40%;
 	align-self: flex-end;
+	border-right: 5px solid #1c203c;
+	border-bottom: 5px solid #1c203c;
 }
 .news-text {
 	flex-basis: min(450px, 40%);
 	margin-left: 30px;
 	margin-right: auto;
 	color: white;
-}
-h1 {
-	font-size: 45px;
-	font-weight: bold;
-
 }
 .news-text h1 {
 	animation-duration: 2s;
@@ -206,7 +208,7 @@ h1 {
 .slidebar-menu-link{
 	color: white;
 	font-size: 20px;
-	transition: color 0.5s;
+	transition: color ease 0.5s;
 	font-weight: bold;
 }
 .slidebar-menu-link:hover {
@@ -230,7 +232,7 @@ h1 {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	transition: width 0.5s ease 0s, background-color 0.5s;
+	transition: width 0.5s ease 0s, background-color 0.5s 0s;
 	box-shadow: 1px 1px 5px 1px black;
 	cursor: pointer;
 }
@@ -316,7 +318,7 @@ input {
 	display: flex;
 	flex-wrap: wrap;
 	height: 600px;
-	width: min(1280px, 100%);
+	width: min(1152px, 100%);
 	justify-content: center;
 	align-items: center;
 	margin-right: auto;
@@ -327,7 +329,6 @@ input {
 }
 .devices-img {
 	height: 100%;
-	width: 100%;
 	background-image: url(https://cdn-web.tunein.com/assets/img/landing/devices-medium.jpg);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
@@ -341,9 +342,7 @@ input {
 }
 .bt-download-apple, .bt-download-google{
 	width: 135px;
-	-webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+    appearance: none;
   	border-radius: 0;
   	background-position: center;
     background-size: contain;
@@ -429,7 +428,7 @@ input {
 }
 .music-icon a img {
 	width: 100%;
-	transition: opacity 0.2s ease 0s;
+	transition: opacity 0.4s ease 0s;
 	z-index: 0;
 }
 .first-double-place {
@@ -449,7 +448,7 @@ input {
 	margin-bottom: 40px;
 }
 .footer-container {
-	height: 280px;
+	height: 270px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -489,7 +488,7 @@ input {
 }
 .footer-menu-link{
 	color: white;
-	transition: color 0.5s;
+	transition: color ease 0.5s;
 }
 .news-text .colored-header {
 	color: #1c203c;
@@ -519,7 +518,7 @@ input {
 		justify-self: stretch;
 	}
 	.footer {
-		height: 481px;
+		height: 501px;
 	}
 	.footer-container {
 		height: 320px;
@@ -546,9 +545,8 @@ input {
 		margin-left: 20px;
 	}
 	.news-image {
-		background-position: center;
-    	background-size: contain;
-    	height: min(426px, 40vw);
+
+    	height: min(427px, 40vw);
 		flex-basis: min(640px, 60vw);
 	}
 	.news-section {
@@ -557,20 +555,28 @@ input {
 	.find-container {
 		height: 50px;
 	}
+	.info-text {
+		flex-basis: 75%;
+	}
+
 }
 @media (max-width: 899px){
-	h1 {
-		font-size: 32px;
-	}
+	
 	h2 {
-		font-size: 24px;
+		font-size: 22px;
 		text-align: center;
 	}
 	.find-row {
-		font-size: 20px;
+		font-size: 18px;
 	}
 	.news-image {
 		background-size: auto 100%;
 		background-position: right;
 	}
+	.devices-section{
+		height: 500px;
+	}
+}
+@media (max-width: 559px) {
+
 }
