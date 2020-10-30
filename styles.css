@@ -51,7 +51,7 @@ h2 {
 	visibility: hidden;
 	width: 0;
 	cursor: pointer;
-	transition: transform 0.25s ease 0s;
+	transition: transform 0.25s ease;
 }
 .logo {
 	background: transparent url(https://cdn-web.tunein.com/assets/img/footer/tunein-logo-tsharp.svg) no-repeat;
@@ -73,7 +73,11 @@ h2 {
 .header-menu-link{
 	color: white;
 	font-size: 24px;
+<<<<<<< Updated upstream
 	transition: color ease 0.5s;
+=======
+	transition: color 0.5s ease;
+>>>>>>> Stashed changes
 }
 .header-menu-link:hover {
 	color: #14d8cc;
@@ -208,7 +212,11 @@ h2 {
 .slidebar-menu-link{
 	color: white;
 	font-size: 20px;
+<<<<<<< Updated upstream
 	transition: color ease 0.5s;
+=======
+	transition: color 0.5s ease;
+>>>>>>> Stashed changes
 	font-weight: bold;
 }
 .slidebar-menu-link:hover {
@@ -232,7 +240,11 @@ h2 {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+<<<<<<< Updated upstream
 	transition: width 0.5s ease 0s, background-color 0.5s 0s;
+=======
+	transition: width 0.5s ease, background-color 0.5s;
+>>>>>>> Stashed changes
 	box-shadow: 1px 1px 5px 1px black;
 	cursor: pointer;
 }
@@ -347,7 +359,7 @@ input {
   	background-position: center;
     background-size: contain;
     cursor: pointer;
-    transition: opacity 0.5s ease 0s;
+    transition: opacity 0.5s ease;
     outline: none;
 }
 .bt-download-apple:hover, .bt-download-google:hover {
@@ -428,7 +440,11 @@ input {
 }
 .music-icon a img {
 	width: 100%;
+<<<<<<< Updated upstream
 	transition: opacity 0.4s ease 0s;
+=======
+	transition: opacity 0.4s ease;
+>>>>>>> Stashed changes
 	z-index: 0;
 }
 .first-double-place {
@@ -488,7 +504,11 @@ input {
 }
 .footer-menu-link{
 	color: white;
+<<<<<<< Updated upstream
 	transition: color ease 0.5s;
+=======
+	transition: color 0.5s ease;
+>>>>>>> Stashed changes
 }
 .news-text .colored-header {
 	color: #1c203c;
@@ -545,7 +565,10 @@ input {
 		margin-left: 20px;
 	}
 	.news-image {
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     	height: min(427px, 40vw);
 		flex-basis: min(640px, 60vw);
 	}
@@ -558,13 +581,21 @@ input {
 	.info-text {
 		flex-basis: 75%;
 	}
+<<<<<<< Updated upstream
 
 }
 @media (max-width: 899px){
 	
+=======
+}
+@media (max-width: 899px){
+>>>>>>> Stashed changes
 	h2 {
 		font-size: 22px;
 		text-align: center;
+	}
+	.devices-section{
+		height: 500px
 	}
 	.find-row {
 		font-size: 18px;

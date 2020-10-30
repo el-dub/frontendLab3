@@ -20,8 +20,6 @@ btSlidebar.onclick = function() {
 	let page = document.querySelector('body');
 	page.onclick = function f1 () {
 		if(event.pageX>270){
-			//slidebar.style.visibility = 'hidden';
-			//slidebar.style.width = '0';
 			slidebar.addEventListener("animationend", function f2() {
 				slidebar.style.visibility = 'hidden';
 				slidebar.style.width = '0';
@@ -30,9 +28,6 @@ btSlidebar.onclick = function() {
 			});
 
 			slidebar.className = 'reducebleSlidebar';
-			//if(slidebar.type === 'animationend'){
-				//slidebar.className = 'slidebar';
-			//}
 			body.removeEventListener('click', f1);
 			
 		}
