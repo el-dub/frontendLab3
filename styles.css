@@ -1,0 +1,576 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: Calibre-Regular, TeXGyreHerosRegular, Helvetica, Tahoma, Geneva, Arial, sans-serif;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	line-height: 1.5em;
+}
+p {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 1.5em;
+}
+h2 {
+	font-size: 30px;
+	text-align: center;
+}
+.colored-header {
+	color: #14d8cc;
+}
+.header{
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+.header-menu-nav {
+	display: flex;
+	align-items: center;
+	background-color: #1c203c;
+	height: 90px;
+	width: 100%;
+}
+.menu-img:hover {
+	transform: rotate(0.5turn);
+}
+.menu-img {
+	visibility: hidden;
+	width: 0;
+	cursor: pointer;
+	transition: transform 0.25s ease 0s;
+}
+.logo {
+	background: transparent url(https://cdn-web.tunein.com/assets/img/footer/tunein-logo-tsharp.svg) no-repeat;
+	background-size: contain;
+	height: 100%;
+	width: 120px;
+	margin-left: 20px;
+	background-position: center;
+}
+.header-menu {
+	flex-grow: 1;
+}
+.header-menu-list {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-basis: 100%;
+}
+.header-menu-link{
+	color: white;
+	font-size: 24px;
+	transition: color 0.5s;
+}
+.header-menu-link:hover {
+	color: #14d8cc;
+}
+.news-section{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 500px;
+	width: 100%;
+	background-color: #14d8cc;
+}
+.news-image {
+	background-image: url(https://cdn-web.tunein.com/assets/img/landing/carousel/hero-jazz24.jpg);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: right;
+	height: 100%;
+	width: auto;
+	flex-basis: 40%;
+	align-self: flex-end;
+}
+.news-text {
+	flex-basis: min(450px, 40%);
+	margin-left: 30px;
+	margin-right: auto;
+	color: white;
+}
+h1 {
+	font-size: 45px;
+	font-weight: bold;
+
+}
+.news-text h1 {
+	animation-duration: 2s;
+	animation-name: slidein;
+}
+@keyframes slidein {
+	from {
+    	margin-left: 100%;
+    	width: 300%; 
+  	}
+  	to {
+  		margin-left: 0%;
+  		width: 100%;
+  	}
+}
+.slidebar {
+	height: 100vh;
+	width: 0;
+	z-index: 2;
+	background-color: #1c203c;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: auto;
+	visibility: hidden;
+}
+.slidebar *, .reducebleSlidebar * {
+	visibility: hidden;
+}
+.slidebar *, .increasebleSlidebar *{
+	transition: visibility 0.1s ease 0.8s;
+}
+.increasebleSlidebar {
+	height: 100vh;
+	z-index: 2;
+	background-color: #1c203c;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: auto;
+	animation: increaseWidth 0.8s;
+}
+.increasebleSlidebar *{
+	visibility: visible;
+}
+.reducebleSlidebar {
+	height: 100vh;
+	z-index: 2;
+	background-color: #1c203c;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: auto;
+	animation: reduceWidth 0.8s;
+}
+
+@keyframes increaseWidth {
+	from {
+		width: 0;
+  	}
+  	to {
+  		width: 270px;
+  	}
+}
+@keyframes reduceWidth {
+	from {
+  		width: 270px;
+  	}
+  	to {
+		width: 0;
+  	}
+}
+.increasebleSlidebar .logo,  .reducebleSlidebar .logo {
+	margin-left: 0;
+	margin-top: 20px;
+	align-self: center;
+	height: 66px;
+	min-height: 66px;
+	width: 150px;
+}
+.slidebar-menu {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	margin-top: 60px;
+}
+.slidebar-menu-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-basis: 100%;
+}
+.slidebar-menu-list li{
+	margin-top: 20px;
+}
+.slidebar-menu-link{
+	color: white;
+	font-size: 20px;
+	transition: color 0.5s;
+	font-weight: bold;
+}
+.slidebar-menu-link:hover {
+	color: #14d8cc;
+}
+.button-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 88vh;
+	width: auto;
+	position: fixed;
+	right: 32px;
+	z-index: 1;
+}
+.listen-button {
+	height: 60px;
+	width: 60px;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	transition: width 0.5s ease 0s, background-color 0.5s;
+	box-shadow: 1px 1px 5px 1px black;
+	cursor: pointer;
+}
+.button-image {
+	width: 60px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.button-image svg{
+	width: 100%
+	height: 100%
+}
+.listen-button:hover {
+	width: 250px;
+}
+.invisible-text{
+	text-overflow: clip;
+	white-space: nowrap;
+	width: 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #1c203c;
+	visibility: hidden;
+	transition: 0.1s;
+}
+.listen-button:hover .invisible-text{
+	width: 250px;
+	visibility: visible;
+}
+
+.find-section-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 200px;
+	background-color: #14d8cc;
+}
+.find-section-container h2 {
+	width: min(1152px, 90%);
+}
+.find-container {
+	width: min(1152px, 90%);
+	height: 80px;
+	background-color: white;
+	display: flex;
+	margin-left: 10%;
+	margin-right: 10%;
+	align-items: center;
+	justify-content: center;
+}
+.find-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40%;
+	font-size: 24px;
+	width: 100%;
+}
+.find-image-container {
+	height: 1em;
+	width: 1em;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+}
+.find-image-container svg{
+	height: 100%;
+	width: 1em;
+}
+.find-input-container {
+	flex-grow: 25;
+}
+input {
+	height: 100%;
+	width: 100%;
+	outline: none;
+}
+.devices-section {
+	display: flex;
+	flex-wrap: wrap;
+	height: 600px;
+	width: min(1280px, 100%);
+	justify-content: center;
+	align-items: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+.devices-section div {
+	flex-basis: 50%;
+}
+.devices-img {
+	height: 100%;
+	width: 100%;
+	background-image: url(https://cdn-web.tunein.com/assets/img/landing/devices-medium.jpg);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.devices-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.bt-download-apple, .bt-download-google{
+	width: 135px;
+	-webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  	border-radius: 0;
+  	background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    transition: opacity 0.5s ease 0s;
+    outline: none;
+}
+.bt-download-apple:hover, .bt-download-google:hover {
+	opacity: 0.7;
+}
+.bt-download-apple{
+	height: 45px;
+  	background: transparent url(https://cdn-web.tunein.com/assets/img/landing/icons/icon-apple.svg) no-repeat;
+    margin-bottom: 10px;
+    
+}
+.bt-download-google{
+	height: 40px;
+  	background: transparent url(https://cdn-web.tunein.com/assets/img/landing/icons/icon-google-play.svg) no-repeat;
+}
+.divider {
+	margin: 80px auto;
+	background-color: #eeefee;
+    height: 2px;
+    border-radius: 5px;
+    width: min(1152px, 90%);
+}
+.discover-section{
+	height: 200px;
+	width: min(1152px, 90%);
+	margin-left: auto;
+	margin-right:auto;
+}
+.discover-text {
+	margin-bottom: 56px;
+}
+.music-icos-section {
+	width: 100%;
+	background-color: #1c203c;
+	height: auto;
+}
+.music-icons-container {
+	margin-right: auto;
+	margin-left: auto;
+	width: min(1152px, 90%);
+  	height: auto;
+  	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  	justify-items: center;
+  	align-items: center;
+  	justify-content: space-between;
+  	align-content: center;
+}
+.music-icons-block {
+	margin-top: 10%;
+	height: auto;
+	width: auto;
+  	display: grid;
+  	grid-template-columns: repeat(4, min(128px, 10vw));
+  	grid-template-rows: min(128px, 10vw) min(134.4px, 10.5vw) repeat(2, min(128px, 10vw));
+  	justify-items: stretch;
+  	align-items: stretch;
+  	justify-content: center;
+  	align-content: center;
+ 	grid-gap: min(12.8px, 1vw);
+}
+.music-icon{ 
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ }
+.music-icon a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+.music-icon a:hover img{
+	opacity: 0.3;
+}
+.music-icon a img {
+	width: 100%;
+	transition: opacity 0.2s ease 0s;
+	z-index: 0;
+}
+.first-double-place {
+	grid-column: 1 / 3;
+}
+.second-double-place {
+	grid-column: 3 / 5;
+}
+.footer {
+	padding-top : 1px;
+	background-color: #1c203c;
+	height: 401px;
+	color: white;
+}
+.footer .divider {
+	background-color: #4b4f6b;
+	margin-bottom: 40px;
+}
+.footer-container {
+	height: 280px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+}
+.footer-row {
+	width: min(1152px, 90%);
+	display: flex;
+	justify-content: space-between;
+}
+.footer-menu {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 3fr repeat(4, 1fr);
+	justify-items: center;
+	justify-content: space-between;
+}
+.tunein-info {
+	display: flex;
+	justify-content: space-around;
+}
+.logo-footer {
+	background: transparent url(https://cdn-web.tunein.com/assets/img/footer/tunein-logo-tsharp.svg) no-repeat;
+	background-size: contain;
+	height: auto;
+	background-position: center;
+	display: flex;
+	flex-basis: 25%;
+}
+.info-text {
+	flex-basis: 50%;
+}
+
+.footer-menu .menu-section .menu-header p{
+	font-weight: bold;
+}
+.footer-menu-link{
+	color: white;
+	transition: color 0.5s;
+}
+.news-text .colored-header {
+	color: #1c203c;
+}
+.footer-menu-link:hover {
+	color: #14d8cc;
+}
+@media (max-width: 1279px){
+	.music-icons-container {
+  		grid-template-columns: 1fr;
+  		grid-template-rows: repeat(2, 1fr);
+	}
+	.music-icons-block {
+  		grid-template-columns: repeat(4, min(152px, 21vw));
+  		grid-template-rows: min(152px, 21vw) min(168px, 23vw) repeat(2, min(152px, 21vw));
+  		grid-column-gap: 
+ 		grid-gap: min(8px, 1vw);
+	}
+	.music-icons-block:nth-child(2){
+		margin-top: 0;
+	}
+	.footer-menu {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.tunein-info {
+		grid-column: 1/5;
+		justify-self: stretch;
+	}
+	.footer {
+		height: 481px;
+	}
+	.footer-container {
+		height: 320px;
+	}
+	.logo-footer{
+		flex-basis: 15%;
+	}
+	.header-menu-nav{
+		height: 60px
+	}
+	.header-menu-nav .logo{
+		width: 80px;
+	}
+	.header-menu-link {
+		font-size: 2px;
+	}
+	.header-menu {
+		visibility: hidden;
+	}
+	.menu-img{
+		visibility: visible;
+		height: 80%;
+		width: auto;
+		margin-left: 20px;
+	}
+	.news-image {
+		background-position: center;
+    	background-size: contain;
+    	height: min(426px, 40vw);
+		flex-basis: min(640px, 60vw);
+	}
+	.news-section {
+		height: auto;
+	}
+	.find-container {
+		height: 50px;
+	}
+}
+@media (max-width: 899px){
+	h1 {
+		font-size: 32px;
+	}
+	h2 {
+		font-size: 24px;
+		text-align: center;
+	}
+	.find-row {
+		font-size: 20px;
+	}
+	.news-image {
+		background-size: auto 100%;
+		background-position: right;
+	}
+}
